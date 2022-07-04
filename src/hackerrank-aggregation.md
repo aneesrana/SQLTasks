@@ -112,6 +112,10 @@ Query the sum of Northern Latitudes (LAT_N) from STATION having values greater t
 Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to 4 decimal places.
   
 	SELECT ROUND(MAX(lat_n), 4) FROM station WHERE lat_n < 137.2345;
+	
+	Correct answer is for Weather Observation Station 14
+	select CAST(MAX(LAT_N) AS DECIMAL (10,4)) from station
+where LAT_N < 137.2345;
   
   
   
